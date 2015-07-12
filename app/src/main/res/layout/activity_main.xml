@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <ImageView android:id="@+id/rect1"
+        android:layout_height="200dp"
+        android:layout_width="150dp"
+        android:src="@drawable/rectangle_red"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:paddingBottom="@dimen/rect_padding"
+        android:paddingRight="@dimen/rect_padding"/>
+
+    <ImageView
+        android:id="@+id/rect2"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/rectangle_blue"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:minWidth="150dp"
+        android:minHeight="100dp"
+        android:layout_below="@+id/rect1"
+        android:paddingRight="@dimen/rect_padding"/>
+
+    <ImageView
+        android:id="@+id/rect3"
+        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:src="@drawable/rectangle_green"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/rect1"
+        android:paddingBottom="@dimen/rect_padding"/>
+
+    <ImageView
+        android:id="@+id/rect4"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/rectangle_white"
+        android:layout_alignParentRight="true"
+        android:minHeight="300dp"
+        android:layout_below="@+id/rect3"
+        android:layout_toRightOf="@id/rect2"
+        android:paddingBottom="@dimen/rect_padding"/>
+
+    <ImageView
+        android:id="@+id/rect5"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/rectangle_pink"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:minHeight="50dp"
+        android:layout_toRightOf="@+id/rect2"
+        android:layout_below="@+id/rect4"/>
+
+</RelativeLayout>
