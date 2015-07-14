@@ -7,6 +7,15 @@
     android:background="@color/black"
     tools:context=".MainActivity">
 
+    <SeekBar
+        android:id="@+id/color_seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="2dp" />
+
     <ImageView android:id="@+id/rect1"
         android:layout_height="200dp"
         android:layout_width="150dp"
@@ -21,11 +30,11 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:src="@drawable/rectangle_blue"
-        android:layout_above="@id/color_seek_bar"
         android:layout_alignParentLeft="true"
         android:minWidth="150dp"
-        android:minHeight="100dp"
+        android:minHeight="200dp"
         android:layout_below="@+id/rect1"
+        android:layout_above="@+id/color_seek_bar"
         android:paddingRight="@dimen/rect_padding"/>
 
     <ImageView
@@ -53,19 +62,10 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:src="@drawable/rectangle_pink"
-        android:layout_above="@id/color_seek_bar"
+        android:layout_above="@+id/color_seek_bar"
         android:layout_alignParentRight="true"
         android:minHeight="50dp"
         android:layout_toRightOf="@+id/rect2"
         android:layout_below="@+id/rect4"/>
-
-    <SeekBar
-        android:id="@+id/color_seek_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="2dp" />
 
 </RelativeLayout>
