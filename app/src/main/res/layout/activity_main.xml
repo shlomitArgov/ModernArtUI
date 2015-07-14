@@ -14,7 +14,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="2dp" />
+        android:layout_marginTop="2dp"
+        android:max="100"/>
 
     <ImageView android:id="@+id/rect1"
         android:layout_height="200dp"

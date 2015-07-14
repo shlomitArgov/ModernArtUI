@@ -2,20 +2,49 @@ package com.shlomitargov.modernartui;
 
 import android.app.DialogFragment;
 import android.app.FragmentManager;
+import android.graphics.drawable.shapes.Shape;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.SeekBar;
 
 
 public class MainActivity extends ActionBarActivity {
 
     private static final String MORE_INFO_DIALOG = "MORE_INFO_DIALOG";
+    private SeekBar mSeekBar;
+    private ImageView mRect1;
+    private ImageView mRect2;
+    private ImageView mRect3;
+    private ImageView mRect5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
+        initMembers();
+
+        mSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            int progress = 0;
+
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
     }
 
     @Override
@@ -41,5 +70,10 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void initMembers() {
+        mSeekBar = (SeekBar)findViewById(R.id.color_seek_bar);
+        mRect1 = (ImageView)findViewById(R.id.rect1);
     }
 }
