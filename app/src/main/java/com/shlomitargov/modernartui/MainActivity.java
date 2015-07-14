@@ -1,5 +1,7 @@
 package com.shlomitargov.modernartui;
 
+import android.app.DialogFragment;
+import android.app.FragmentManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -7,6 +9,8 @@ import android.view.MenuItem;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    private static final String MORE_INFO_DIALOG = "MORE_INFO_DIALOG";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +33,10 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.more_information) {
+            //Open pop-up menu
+            DialogFragment moreInfoDialog = new MoreInformationFragment();
+            moreInfoDialog.show(getFragmentManager(), MORE_INFO_DIALOG);
             return true;
         }
 
