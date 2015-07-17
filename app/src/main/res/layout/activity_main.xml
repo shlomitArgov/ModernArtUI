@@ -17,7 +17,7 @@
         android:layout_marginTop="2dp"
         android:max="100"/>
 
-    <ImageView android:id="@+id/rect1"
+    <ImageView android:id="@+id/rect_red"
         android:layout_height="200dp"
         android:layout_width="150dp"
         android:src="@drawable/rectangle_red"
@@ -27,46 +27,46 @@
         android:paddingRight="@dimen/rect_padding"/>
 
     <ImageView
-        android:id="@+id/rect2"
+        android:id="@+id/rect_blue"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:src="@drawable/rectangle_blue"
         android:layout_alignParentLeft="true"
         android:minWidth="150dp"
         android:minHeight="200dp"
-        android:layout_below="@+id/rect1"
+        android:layout_below="@+id/rect_red"
         android:layout_above="@+id/color_seek_bar"
         android:paddingRight="@dimen/rect_padding"/>
 
     <ImageView
-        android:id="@+id/rect3"
+        android:id="@+id/rect_green"
         android:layout_height="100dp"
         android:layout_width="wrap_content"
         android:src="@drawable/rectangle_green"
         android:layout_alignParentRight="true"
-        android:layout_toRightOf="@+id/rect1"
+        android:layout_toRightOf="@+id/rect_red"
         android:paddingBottom="@dimen/rect_padding"/>
 
     <ImageView
-        android:id="@+id/rect4"
+        android:id="@+id/rect_white"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:src="@drawable/rectangle_white"
         android:layout_alignParentRight="true"
         android:minHeight="250dp"
-        android:layout_below="@+id/rect3"
-        android:layout_toRightOf="@id/rect2"
+        android:layout_below="@+id/rect_green"
+        android:layout_toRightOf="@id/rect_blue"
         android:paddingBottom="@dimen/rect_padding"/>
 
     <ImageView
-        android:id="@+id/rect5"
+        android:id="@+id/rect_pink"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:src="@drawable/rectangle_pink"
         android:layout_above="@+id/color_seek_bar"
         android:layout_alignParentRight="true"
         android:minHeight="50dp"
-        android:layout_toRightOf="@+id/rect2"
-        android:layout_below="@+id/rect4"/>
+        android:layout_toRightOf="@+id/rect_blue"
+        android:layout_below="@+id/rect_white"/>
 
 </RelativeLayout>
