@@ -6,6 +6,7 @@ import android.graphics.ColorFilter;
 import android.graphics.LightingColorFilter;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
+import android.graphics.drawable.ShapeDrawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -88,14 +89,11 @@ public class MainActivity extends ActionBarActivity {
 
     private void changeRectColors(int progress)
     {
-        ColorFilter red_filter = new PorterDuffColorFilter(Color.rgb(0, 2 * progress, progress), PorterDuff.Mode.ADD);
-        ColorFilter blue_filter = new PorterDuffColorFilter(Color.rgb(progress, 2* progress, 0), PorterDuff.Mode.ADD);
-        ColorFilter green_filter = new PorterDuffColorFilter(Color.rgb(2* progress, 0, 0), PorterDuff.Mode.ADD);
-        ColorFilter pink_filter = new PorterDuffColorFilter(Color.rgb(progress, progress, 0), PorterDuff.Mode.ADD);
-
-        mRect_red.getDrawable().setColorFilter(red_filter);
-        mRect_blue.getDrawable().setColorFilter(blue_filter);
-        mRect_green.getDrawable().setColorFilter(green_filter);
-        mRect_pink.getDrawable().setColorFilter(pink_filter);
+        mRect_red.setBackgroundColor(Color.rgb(Color.red(getResources().getColor(R.color.red)), 2 * progress, 0));
+        mRect_blue.setBackgroundColor(Color.rgb(2 * progress, 0, Color.blue(getResources().getColor(R.color.blue))));
+        mRect_green.setBackgroundColor(Color.rgb(2 * progress, Color.green(getResources().getColor(R.color.green)), progress));
+        mRect_pink.setBackgroundColor(Color.rgb(Color.red(getResources().getColor(R.color.pink)) - progress,
+                                                Color.green(getResources().getColor(R.color.pink)) + progress,
+                                                Color.blue(getResources().getColor(R.color.pink))));
     }
 }
